@@ -3,6 +3,9 @@ Uses gene names saved as a list in `.txt` to lookup all isoform entry list IDs, 
 
 The `.txt` list is newline delimited.
 
+## Output Format
+Output is the initial gene name, followed by the isoform entries for that gene. Thus a row can have N (>=2) columns, separated by space.
+
 ## Requirements
 * `python3`
 * `venv` (if you want to run in `venv`)
