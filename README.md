@@ -25,3 +25,6 @@ optional arguments:
   --organism ORGANISM   Specify organism to search for by common name. Default: MOUSE
   --output OUTPUT       Path to file where to store the results. Default: results.txt
 ```
+
+## Contributors
+Initial idea goes to Suzuka, who does this tedious work occasionally for her research.
