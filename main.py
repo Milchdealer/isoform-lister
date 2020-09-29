@@ -56,6 +56,7 @@ if __name__ == "__main__":
     results = []
     for entry in entries:
         result = entry.copy()
+        results.append(result)
 
         id_page = requests.get(UNIPROT_ID_PAGE.format(entry["uniprot_id"]))
         soup = bs(id_page.text, "html.parser")
@@ -77,12 +78,12 @@ if __name__ == "__main__":
             entry_list.append(entry.find("a").encode_contents().decode("UTF-8"))
 
         result.update({"entries": entry_list})
-        results.append(result)
         sleep(0.5)
 
     with open(args.output, "w") as f:
         for result in results:
             f.write(result["uniprot_id"])
             f.write(" ")
-            f.write(" ".join(result["entries"]))
+            if "entries" in result:
+                f.write(" ".join(result["entries"]))
             f.write("\n")
