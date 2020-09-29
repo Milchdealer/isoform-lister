@@ -5,13 +5,18 @@ The `.txt` list is newline delimited.
 
 ## Requirements
 * `python3`
-* `venv`
+* `venv` (if you want to run in `venv`)
 
-## Setup
+## Setup (venv)
 ```sh
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
+
+## Setup (global)
+```sh
+pip install requests beautifulsoup4
 ```
 
 ## Usage
